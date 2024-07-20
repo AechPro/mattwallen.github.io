@@ -52,15 +52,17 @@
 								<div class="container">
 									<header class="major">
 										<h2>About Me</h2>
-										<p>I have a passion for Machine Learning, coding, and AI.</p>
+										<p>I have a passion for machine learning, coding, and AI.</p>
 									</header>
 									<p>In 2020 I earned a Bachelor of Science degree in Computer Engineering Technology from the Rochester Institute of Technology. During that time I taught myself 
-										everything I could about Machine Learning, and was fortunate enough to be accepted for an internship at the Center for Systems Biology, a multi-discilinary 
-										bio-technology research lab at the Massachusetts General Hospital. There I developed novel image processing techniques to identify potentially cancerous cells
-										in images of tissue samples taken with digital holography.
+										everything I could about machine learning and was fortunate enough to be accepted for an internship at the Center for Systems Biology, a multi-discilinary
+										bio-technology research lab at the Massachusetts General Hospital. There I developed novel image processing techniques based in machine learning to identify
+										potentially cancerous cells in images of tissue samples taken with digital holography.
 										<br>
-										Since then I have been pursuing a first author work in Reinforcement Learning where I am tackling fundamental questions pertaining to the nature of exploration.
-										This work has already lead to two pre-publications on arXiv that are available <a href="https://arxiv.org/abs/2001.01684">here</a> and <a href="https://arxiv.org/abs/2111.06005">here</a>.
+										Since then I have been pursuing research in reinforcement learning as a researcher at the same lab. My work has involved tackling fundamental questions about
+										the nature of exploration in decision processes, which led to a <a href="https://arxiv.org/abs/2111.06005">novel mathematical framework about agent behavior</a>,
+										and a <a href="https://arxiv.org/abs/2210.07487">highly scalable finite difference algorithm</a> for deep reinforcement learning. I am currently investigating
+										improvements to modern off-policy learning algorithms.
 									</p>
 								</div>
 							</section>
@@ -71,12 +73,12 @@
 									<h3>My Skills</h3>
 									<p>I am a programmer with experience in a variety of languages including C, C++, Python, Java, and others.</p>
 									<ul class="feature-icons">
-										<li class="icon solid fa-code">I am proficient in the design and development of sophisticated software systems.</li>
+										<li class="icon solid fa-code">I am proficient in the design and development of sophisticated and scalable machine learning software systems.</li>
+										<li class="icon solid fa-book">I am the co-author of the <a href="https://rlgym.org/">Rocket League Gym</a> - a reinforcement learning environment for the Esport Rocket League.</li>
+										<li class="icon solid fa-coffee">I am used to workflows involving Github and other version control services like TortoiseSVN.</li>
+										<li class="icon solid fa-users">I am no stranger to team work and collaboration, having worked on several team oriented projects in my research.</li>
 										<li class="icon solid fa-cubes">My degree program trained me in analog circuit analysis.</li>
-										<li class="icon solid fa-book">I am the co-author of the <a href="https://rlgym.org/">Rocket League Gym</a> - a Reinforcement Learning environment for the Esport Rocket League.</li>
-										<li class="icon solid fa-coffee">I am no stranger to team work and collaboration, having worked on several team oriented projects in my research.</li>
-										<li class="icon solid fa-bolt">I am used to workflows involving Github and other version control services like TortoiseSVN.</li>
-										<li class="icon solid fa-users">Alongside circuit analysis, my undergraduate degree trained me to design and develop hardware circuits with VHDL.</li>
+										<li class="icon solid fa-bolt">Alongside circuit analysis, my undergraduate degree trained me in the design and development of hardware with VHDL.</li>
 									</ul>
 								</div>
 							</section>
@@ -104,10 +106,10 @@
 											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>Rocket League Gym</h4>
-												<p>My passion for gaming and Reinforcement Learning led me to co-author a mod and API for the popular Esport <a href="https://www.rocketleague.com/">Rocket League</a> which enables AI practitioners 
-													to control the game via Python as though it were an <a href="https://www.gymlibrary.ml/">Openai Gym</a>-style learning environment. We titled this project the <a href="https://rlgym.org/">Rocket League Gym (RLGym),</a> 
-													and it has gained enough of a following that a few users of our project developed a high-level community-based bot called  
-													<a href="https://www.youtube.com/watch?v=LO4h8djNB50">Nexto</a> with Reinforcement Learning. This bot was trained with compute power that was crowd-sourced
+												<p>My passion for gaming and reinforcement learning led me to co-author a mod and API for the popular Esport <a href="https://www.rocketleague.com/">Rocket League</a> which enables AI practitioners
+													to control the game via Python as though it were an <a href="https://gymnasium.farama.org/">Gymnasium</a>-style learning environment. We titled this project the <a href="https://rlgym.org/">Rocket League Gym</a> (RLGym),
+													and it has gained a large following of interested bot-makers. Users of our project came together to develop a high-level open-source bot called
+													<a href="https://www.youtube.com/watch?v=LO4h8djNB50">Nexto</a> with reinforcement learning. This bot was trained with compute power that was crowd-sourced
 													from our users and became so good at the game that it caught the eye of several popular YouTube content creators like <a href="https://www.youtube.com/watch?v=owhz5RSX0go">Sunless Khan</a>, 
 													<a href="https://www.youtube.com/watch?v=AyAiJFnRFCk">Lethamyr</a>, <a href="https://www.youtube.com/watch?v=LO4h8djNB50">Rocket Sledge</a>, and more.
 													Across all videos about Nexto, the RLGym community bot has accumulated over 1 million total views.
@@ -116,12 +118,14 @@
 										</article>
 										
 										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+											<a href="#" class="image"><img src="images/sys_dia.jpg" alt="" /></a>
 											<div class="inner">
-												<h4>Distributable Reinforcement Learning</h4>
-												<p>I have developed multiple large-scale distributable computing platforms for Reinforcement Learning. While the first is still undergoing private development for a future publication, the second is
-													publicly available on <a href="https://github.com/AechPro/distrib-rl">my GitHub</a> and provides a variety of useful tools for scientific computing. The architecture of the platform enables multiple 
-													asynchronous machines to transmit data to Redis, where a learning algorithm can consume that data and compute updates to a policy.
+												<h4>A Scalable Finite Difference Method for Deep Reinforcement Learning</h4>
+												<p>In my first-author work, I developed a highly scalable distributed system to train reinforcement learning agents with a novel finite differences algorithm. The architecture of the platform
+													uses gRPC to facilitate communication between a central learning process and any number of connected remote worker processes. The system is fully deterministic and natively integrated with
+													Weights & Biases to support hyperparameter sweeps and repeatable experiments. My paper about this project can be found <a href="https://arxiv.org/abs/2210.07487">here</a> and some starter code
+													which includes both the scalable finite differences algorithm and an implementation of the generalized Novelty Search algorithm from my <a href="https://arxiv.org/abs/2111.06005 ">prior research</a>
+													can be found on my GitHub <a href="https://github.com/AechPro/dfd-starter/tree/main">here</a>.
 												</p>
 											</div>
 										</article>
